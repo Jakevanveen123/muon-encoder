@@ -1,0 +1,5 @@
+torch>=2.4
+transformers>=4.48
+datasets
+wandb
+numpy
