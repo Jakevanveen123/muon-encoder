@@ -115,7 +115,7 @@ if os.path.exists(ckpt_path):
         opt.load_state_dict(state)
     scaler.load_state_dict(ckpt["scaler"])
     train_stream.pos = ckpt["stream_pos"]
-    mask_gen.set_state(ckpt["mask_gen"])
+    mask_gen.set_state(ckpt["mask_gen"].cpu())
     start_step = ckpt["step"] + 1
     print(f"resuming {run_name} from step {start_step}")
 
